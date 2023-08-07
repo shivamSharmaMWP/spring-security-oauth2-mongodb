@@ -55,12 +55,12 @@ db.app_user.insert(
 			"credentialsNonExpired" : false,
 			"email" : "boottechnologies.ci@gmail.com",
 			"enabled" : true,
-			"firstName" : "system",
-			"lastName" : "admin",
-			"password" : "$2a$04$EZzbSqieYfe/nFWfBWt2KeCdyq0UuDEM1ycFF8HzmlVR6sbsOnw7u",
-			"username" : "system",
+			"firstName" : "First Name",
+			"lastName" : "Last Name",
+			"username" : "admin",
+			"password" : "$2a$12$Kn6wuDUy0u9qvmJpMi2HTeeIvnZpwEVHmI9BHX4/Go0WmZjx7LhQu",
 			"roles" : ["MD_SET_ADMIN"],
 			"_class" : "com.microservice.springsecurityoauth2mongodb.document.User"
-		} 
+		}
     ]
 );

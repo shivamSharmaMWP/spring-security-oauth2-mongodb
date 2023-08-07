@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -19,11 +20,16 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler{
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
         response.setContentType("application/json;charset=UTF-8");
 
-        Map<Object, Object> map = Map.of(
-                "data", "",
-                "error", true,
-                "message", accessDeniedException.getMessage()
-        );
+        Map<Object, Object> map = new HashMap<>();
+        map.put("data", "");
+        map.put("error", true);
+        map.put("message", accessDeniedException.getMessage());
+
+        //        Map<Object, Object> map = Map.of(
+//                "data", "",
+//                "error", true,
+//                "message", accessDeniedException.getMessage()
+//        );
 
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

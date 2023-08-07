@@ -9,8 +9,8 @@ spring:
       host: localhost
       port: 27017
       database: oauth-database
-      username: admin
-      password: admin
+#      username: admin
+#      password: admin
   jackson:
     serialization:
       fail-on-empty-beans: false
